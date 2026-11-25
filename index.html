@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vagas | ConectaPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topo">
+      <a class="voltar" href="#" onclick="history.back(); return false;" aria-label="Voltar">‹</a>
+      <img class="logo" src="img/logo.png" alt="ConectaPro">
+      <h1 class="faixa">Encontre sua próxima oportunidade, vagas que combinem com você.</h1>
+    </header>
+
+    <form id="filtros" class="filtros">
+      <label class="sr-only" for="local">Localização</label>
+      <select id="local" class="campo"><option value="">Localização</option></select>
+      <div class="linha">
+        <label class="sr-only" for="area">Área</label>
+        <select id="area" class="campo"><option value="">Área</option></select>
+        <button class="btn btn-laranja" type="submit">Buscar</button>
+      </div>
+    </form>
+
+    <div class="pills">
+      <span class="pill">Resultados</span>
+      <span class="pill" id="contador" aria-live="polite"></span>
+    </div>
+
+    <section id="lista" aria-label="Lista de vagas"></section>
+  </main>
+
+  <button class="acess" id="acess" type="button" aria-pressed="false" aria-label="Aumentar tamanho do texto">A+</button>
+
+  <script src="js/comum.js"></script>
+  <script src="js/vagas.js"></script>
+</body>
+</html>

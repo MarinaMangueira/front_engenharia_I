@@ -1,0 +1,65 @@
+/* ConectaPro - estilos (cores e formas do Figma) */
+:root{--roxo:#521690;--laranja:#fe771f;--cinza:#f6f6f6;--branco:#fff;--verde:#00eb56;--erro:#b3261e}
+*{box-sizing:border-box;margin:0}
+html{font-size:100%}
+html.texto-grande{font-size:122%}
+body{font-family:'Inter',Arial,sans-serif;color:var(--roxo);background:var(--cinza)}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--laranja);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.app{max-width:430px;min-height:100vh;margin:0 auto;padding:1rem 1.25rem 6rem;background:var(--branco)}
+
+/* topo */
+.topo{position:relative;display:flex;flex-direction:column;align-items:center;margin-bottom:1.25rem}
+.voltar{position:absolute;left:0;top:.5rem;width:44px;height:44px;border:2px solid var(--roxo);border-radius:50%;color:var(--roxo);font-size:1.75rem;font-weight:700;line-height:38px;text-align:center;text-decoration:none}
+.logo{width:150px;height:150px;object-fit:contain}
+.faixa{width:100%;margin-top:-.5rem;padding:.85rem 1rem;background:var(--roxo);color:#fff;font-size:.875rem;font-weight:700;text-align:center;border-radius:20px}
+
+/* campos e botões */
+.campo{width:100%;min-height:39px;padding:.6rem 1.1rem;background:var(--cinza);border:1.5px solid var(--roxo);border-radius:20px;color:var(--roxo);font:inherit;font-size:.8125rem}
+select.campo{appearance:none;padding-right:2.5rem;background-repeat:no-repeat;background-position:right 1rem center;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23521690' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E")}
+textarea.campo{border-radius:17px;resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:39px;padding:0 1.5rem;border:0;border-radius:20px;color:#fff;font:inherit;font-size:.8125rem;font-weight:700;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.12)}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn-laranja{background:var(--laranja)}
+.btn-roxo{background:var(--roxo)}
+.btn-cheio{width:100%;margin-top:1.25rem}
+
+/* página de vagas */
+.filtros{display:grid;gap:.75rem;margin-bottom:1.25rem}
+.linha{display:flex;gap:.75rem}
+.linha .campo{flex:1}
+.pills{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem}
+.pill{padding:.6rem 1.1rem;background:var(--laranja);border-radius:20px;color:#fff;font-size:.8125rem;font-weight:700}
+.vazio{padding:1.5rem 0;font-size:.875rem;text-align:center}
+
+/* cartão de vaga */
+.card{display:flex;flex-direction:column;gap:.25rem;margin-bottom:1rem;padding:1rem 1.25rem;background:var(--cinza);border:2px solid var(--roxo);border-radius:17px}
+.card h2{font-size:1rem;font-weight:700}
+.card p{font-size:.875rem;line-height:1.4}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0;padding:0;list-style:none}
+.tags li{padding:.4rem .8rem;background:var(--laranja);border-radius:20px;color:#fff;font-size:.6875rem;font-weight:700}
+.card .btn{align-self:center;min-width:156px;min-height:30px;font-size:.75rem}
+.enviado{align-self:center;font-size:.75rem;font-weight:700;margin-bottom:.4rem}
+
+/* página de envio de currículo */
+.titulo-secao,.rotulo{display:block;margin:1.25rem 0 .5rem;font-size:.875rem;font-weight:700}
+.opcoes{display:grid;gap:.5rem;margin-bottom:1rem;padding:0;border:0}
+.opcao{display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;background:var(--cinza);border:1.5px solid var(--roxo);border-radius:20px;font-size:.8125rem;font-weight:500;cursor:pointer}
+.opcao input{width:1.1rem;height:1.1rem;accent-color:var(--laranja)}
+.opcao:has(input:checked){background:var(--roxo);color:#fff}
+.ajuda{margin-top:.4rem;font-size:.75rem}
+.arquivo{display:flex;justify-content:space-between;align-items:center;gap:.75rem;margin-top:.75rem;padding:.6rem 1rem;background:var(--cinza);border:1.5px dashed var(--roxo);border-radius:20px;font-size:.8125rem;word-break:break-all}
+.arquivo button{flex:none;border:0;background:none;color:var(--roxo);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer}
+.digital{padding:.8rem 1rem;background:var(--cinza);border-radius:17px;font-size:.8125rem;line-height:1.5}
+.erro{margin:.75rem 0 0;color:var(--erro);font-size:.8125rem;font-weight:700}
+.sucesso{display:grid;justify-items:center;gap:.75rem;padding:1.5rem 0;text-align:center}
+.sucesso h2{font-size:1.125rem}
+.sucesso p{font-size:.875rem;line-height:1.5}
+.marca{display:grid;place-items:center;width:64px;height:64px;background:var(--verde);border-radius:50%;color:var(--roxo);font-size:2rem;font-weight:700}
+
+/* botão de acessibilidade */
+.acess{position:fixed;right:max(16px,calc(50% - 199px));bottom:16px;width:56px;height:56px;border:0;border-radius:50%;background:var(--laranja);color:#fff;font:inherit;font-size:1.125rem;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+.acess[aria-pressed="true"]{background:var(--roxo)}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enviar currículo | ConectaPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topo">
+      <a class="voltar" href="index.html" aria-label="Voltar para as vagas">‹</a>
+      <img class="logo" src="img/logo.png" alt="ConectaPro">
+      <h1 class="faixa">Enviar currículo</h1>
+    </header>
+
+    <section id="vaga" class="card" aria-label="Vaga escolhida"></section>
+
+    <form id="formEnvio" novalidate>
+      <h2 class="titulo-secao">Envie seu currículo</h2>
+
+      <fieldset class="opcoes">
+        <legend class="sr-only">Como você quer enviar</legend>
+        <label class="opcao"><input type="radio" name="tipo" value="arquivo" checked> Anexar um arquivo</label>
+        <label class="opcao"><input type="radio" name="tipo" value="digital"> Usar meu currículo digital</label>
+      </fieldset>
+
+      <div id="blocoArquivo">
+        <input type="file" id="arquivo" accept=".pdf,.doc,.docx" hidden>
+        <button type="button" id="btnAnexar" class="btn btn-roxo btn-cheio" style="margin-top:0">+ Anexar arquivo</button>
+        <p class="ajuda">PDF, DOC ou DOCX, até 5 MB.</p>
+        <div id="nomeArquivo" class="arquivo" hidden>
+          <span id="txtArquivo"></span>
+          <button type="button" id="btnRemover">Remover</button>
+        </div>
+      </div>
+
+      <div id="blocoDigital" class="digital" hidden>
+        Gabriel Mendonça – Designer Gráfico &amp; UI Designer<br>
+        Vamos enviar o currículo digital do seu perfil.
+      </div>
+
+      <label class="rotulo" for="msg">Mensagem para a empresa (opcional)</label>
+      <textarea id="msg" class="campo" rows="4" maxlength="500" placeholder="Conte por que você quer essa vaga."></textarea>
+
+      <p id="erro" class="erro" role="alert" hidden></p>
+      <button id="btnEnviar" class="btn btn-laranja btn-cheio" type="submit">Enviar currículo</button>
+    </form>
+
+    <section id="sucesso" class="sucesso" hidden>
+      <div class="marca" aria-hidden="true">✓</div>
+      <h2 id="tituloSucesso" tabindex="-1"></h2>
+      <p id="textoSucesso"></p>
+      <a class="btn btn-roxo" href="index.html">Procurar mais vagas</a>
+    </section>
+  </main>
+
+  <button class="acess" id="acess" type="button" aria-pressed="false" aria-label="Aumentar tamanho do texto">A+</button>
+
+  <script src="js/comum.js"></script>
+  <script src="js/curriculo.js"></script>
+</body>
+</html>
